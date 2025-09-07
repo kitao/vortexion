@@ -1,7 +1,7 @@
 # title: Vortexion
 # author: Adam
 # desc: An MSX/SG-1000 inspired shoot-em-up
-# site: https://github.com/helpcomputer/laser-jetman
+# site: https://github.com/helpcomputer/vortexion
 # license: MIT
 # version: 1.0
 
