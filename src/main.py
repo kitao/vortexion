@@ -1,3 +1,9 @@
+# title: Vortexion
+# author: Adam
+# desc: An MSX/SG-1000 inspired shoot-em-up
+# site: https://github.com/helpcomputer/laser-jetman
+# license: MIT
+# version: 1.0
 
 import pyxel as px
 from game import Game
@@ -10,7 +16,7 @@ from input import Input
 class App:
     def __init__(self) -> None:
         px.init(
-            APP_WIDTH, APP_HEIGHT, 
+            APP_WIDTH, APP_HEIGHT,
             title=APP_NAME,
             fps=APP_FPS,
             display_scale=APP_DISPLAY_SCALE,
@@ -19,7 +25,7 @@ class App:
 
         px.colors.from_list(PALETTE)
         px.images[0].load(0, 0, "assets/" + APP_GFX_FILE)
-        px.load("assets/" + SOUNDS_RES_FILE, excl_images=True, 
+        px.load("assets/" + SOUNDS_RES_FILE, excl_images=True,
                 excl_tilemaps=True, excl_musics=True)
 
         self.main_font = MonospaceBitmapFont()
@@ -28,14 +34,14 @@ class App:
         self.game = Game(self)
 
         px.run(self.update, self.draw)
-    
+
     def update(self):
         self.input.update()
         self.game.update()
-    
+
     def draw(self):
         px.cls(0)
         self.game.draw()
-    
+
 if __name__ == "__main__":
     App()
