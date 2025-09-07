@@ -25,8 +25,8 @@ class App:
 
         px.colors.from_list(PALETTE)
         px.images[0].load(0, 0, "assets/" + APP_GFX_FILE)
-        px.load("assets/" + SOUNDS_RES_FILE, excl_images=True,
-                excl_tilemaps=True, excl_musics=True)
+        px.load("assets/" + SOUNDS_RES_FILE, exclude_images=True,
+                exclude_tilemaps=True, exclude_musics=True)
 
         self.main_font = MonospaceBitmapFont()
         self.input = Input()
